@@ -84,14 +84,14 @@ class RxTextField<T> extends StatelessWidget {
     this.buildCounter,
     this.scrollController,
     this.scrollPhysics,
-  })
+  });
 
-  @override
   Widget build(BuildContext context) {
     return StreamBuilder<T>(
       stream: subscribe,
       builder: (context, snapshot) {
-        InputDecoration decoration = this.decoration.copyWith(errorText: snapshot.error);
+        InputDecoration decoration =
+            this.decoration.copyWith(errorText: snapshot.error);
 
         return TextField(
           key: key,
